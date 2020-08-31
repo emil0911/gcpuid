@@ -5,7 +5,7 @@
 *gcpuid* published under [MIT](https://github.com/emil0911/gcpuid/blob/master/LICENSE) license
 
 ## Compiling
-- Open *gcpuid.sln* file in **Microsoft Visual Studio 2012** or **2019** (in other versions i didn't tried, but i think will work properly too)
+- Open *gcpuid.sln* file in **Microsoft Visual Studio 2012** or **2019** (in other versions i didn't tried, but i think it will be work properly too)
 - Press Build->Build Solution.
 - Build will be located in **(Source directory)/Debug/gcpuid.exe**
 
