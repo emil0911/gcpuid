@@ -39,10 +39,12 @@ int main(){
 	__cpuid(cpuinfo, 7);
 
 	printf("AVX2: %d\n", cpuinfo[1] >> 5 & 1);
+	printf("SHA: %d\n", cpuinfo[1] >> 29 & 1 );
 
 	__cpuid(cpuinfo, 0x80000001);
 
 	printf("MMX+: %d\n", cpuinfo[3] >> 22 & 1);
 	printf("3DNow!: %d\n", cpuinfo[3] >> 31 & 1);
-	printf("Extended 3DNow!: %d", cpuinfo[3] >> 30 & 1);
+	printf("Extended 3DNow!: %d\n", cpuinfo[3] >> 30 & 1);
+	printf("SSE4A: %d", cpuinfo[2] >> 6 & 1);
 }
