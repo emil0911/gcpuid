@@ -5,7 +5,9 @@
 #define ECX 2
 #define EDX 3
 
-// thanks for https://en.wikipedia.com/wiki/CPUID
+// thanks for https://en.wikipedia.com/wiki/CPUID.
+
+// and thanks to boxmein for sample, that working with CPUID from C.
 
 int main(){
 	int cpuinfo[4];
@@ -13,18 +15,18 @@ int main(){
 	__cpuid(cpuinfo, 0);
 
 	printf("Brand: %c%c%c%c%c%c%c%c%c%c%c%c\n",
-    cpuinfo[EBX]       &0xff, 
-    cpuinfo[EBX] >> 8  &0xff, 
-    cpuinfo[EBX] >> 16 &0xff, 
-    cpuinfo[EBX] >> 24 &0xff,
-    cpuinfo[EDX]       &0xff,
-    cpuinfo[EDX] >> 8  &0xff,
-    cpuinfo[EDX] >> 16 &0xff,
-    cpuinfo[EDX] >> 24 &0xff,
-	cpuinfo[ECX]       &0xff,
-    cpuinfo[ECX] >> 8  &0xff,
-    cpuinfo[ECX] >> 16 &0xff,
-    cpuinfo[ECX] >> 24 &0xff);
+    		cpuinfo[EBX]       & 0xff, 
+    		cpuinfo[EBX] >> 8  & 0xff, 
+    		cpuinfo[EBX] >> 16 & 0xff, 
+    		cpuinfo[EBX] >> 24 & 0xff,
+    		cpuinfo[EDX]       & 0xff,
+    		cpuinfo[EDX] >> 8  & 0xff,
+    		cpuinfo[EDX] >> 16 & 0xff,
+    		cpuinfo[EDX] >> 24 & 0xff,
+		cpuinfo[ECX]       & 0xff,
+    		cpuinfo[ECX] >> 8  & 0xff,
+    		cpuinfo[ECX] >> 16 & 0xff,
+    		cpuinfo[ECX] >> 24 & 0xff);
 
 	__cpuid(cpuinfo, 1);
 
