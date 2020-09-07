@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 *.md
+*.htm
 
 # Object files
 *.o
